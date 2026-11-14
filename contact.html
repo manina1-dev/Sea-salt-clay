@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Sea Salt Clay</title>
+<meta name="description" content="Get in touch about a piece, a custom commission, wholesale or a studio visit.">
+<link rel="icon" href="assets/img/mug.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#c0795a"/>
+        <path d="M1.8 24a19 19 0 0 0 36.4 0z" fill="#7c9a92"/>
+        <ellipse cx="20" cy="13" rx="11" ry="3.6" fill="#e4d8c9"/>
+      </svg>
+      Sea Salt Clay
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section wrap">
+    <div class="split" style="align-items:start">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1>Say hello</h1>
+        <p>Questions about a piece, a commission, or wholesale — this reaches the studio directly. Expect a reply within a couple of working days.</p>
+
+        <form class="form" id="contact-form" style="margin-top:2rem">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="piece">Piece you're asking about <small>(optional)</small></label>
+            <input type="text" id="piece" name="piece" placeholder="e.g. Harbour Mug">
+          </div>
+          <div class="field">
+            <label for="reason">What's this about?</label>
+            <select id="reason" name="reason">
+              <option>A piece in the shop</option>
+              <option>A custom commission</option>
+              <option>Wholesale or stockists</option>
+              <option>Studio visit</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div>
+            <button class="btn btn--primary" type="submit">Send message</button>
+          </div>
+          <p class="form-note" id="form-status" hidden></p>
+          <p class="form-note">Heads up: this form is a front-end demo and doesn't send anywhere yet. The README explains how to connect it to a form service or your own backend.</p>
+        </form>
+      </div>
+
+      <div>
+        <div class="split__art" style="aspect-ratio:1/1;margin-bottom:2rem">
+          <img src="assets/img/planter.svg" alt="A glazed planter holding a small plant">
+        </div>
+
+        <dl class="info-list" id="visit">
+          <div>
+            <dt>Email</dt>
+            <dd style="margin:0"><a href="mailto:hello@seasaltclay.example">hello@seasaltclay.example</a></dd>
+          </div>
+          <div>
+            <dt>Studio</dt>
+            <dd style="margin:0"><span>12 Coastal Lane, Seaside<br>Open by appointment only</span></dd>
+          </div>
+          <div>
+            <dt>Markets</dt>
+            <dd style="margin:0"><span>Second Saturday of the month at the harbour market, 9am–2pm.</span></dd>
+          </div>
+          <div>
+            <dt>Wholesale</dt>
+            <dd style="margin:0"><span>Line sheets available on request for shops and galleries.</span></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="19" fill="#c0795a"/>
+            <path d="M1.8 24a19 19 0 0 0 36.4 0z" fill="#7c9a92"/>
+            <ellipse cx="20" cy="13" rx="11" ry="3.6" fill="#e4d8c9"/>
+          </svg>
+          Sea Salt Clay
+        </a>
+        <p>Handmade stoneware for everyday use. Thrown, glazed and fired in a small coastal studio.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All pieces</a></li>
+          <li><a href="shop.html#grid">Mugs &amp; cups</a></li>
+          <li><a href="shop.html#grid">Bowls</a></li>
+          <li><a href="shop.html#grid">Vases</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#care">Care &amp; use</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#visit">Visit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <span>&copy; <span data-year>2026</span> Sea Salt Clay. All rights reserved.</span>
+      <span>Studio open by appointment · Coastal Lane, Seaside</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

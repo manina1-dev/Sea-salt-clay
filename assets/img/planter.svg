@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Illustration of a glazed planter with a plant">
+  <path d="M100 96c-4-20-18-32-34-34 2 18 14 32 34 36z" fill="#7c9a92"/>
+  <path d="M100 96c4-22 20-34 38-36-2 20-16 34-38 38z" fill="#8faea6"/>
+  <path d="M100 98c0-22 6-38 16-50-14 10-22 28-22 50z" fill="#5d7a72"/>
+  <path d="M62 108h76l-9 54a13 13 0 0 1-13 11H84a13 13 0 0 1-13-11z" fill="#c0795a"/>
+  <rect x="55" y="94" width="90" height="20" rx="7" fill="#cf8a68"/>
+  <rect x="55" y="94" width="90" height="8" rx="4" fill="#e4d8c9"/>
+  <circle cx="90" cy="138" r="2.4" fill="#a35f42" opacity=".5"/>
+  <circle cx="114" cy="150" r="2" fill="#a35f42" opacity=".45"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Illustration of a ceramic pitcher">
+  <path d="M134 78c22 4 32 18 32 36s-10 30-28 34" fill="none" stroke="#a35f42" stroke-width="13" stroke-linecap="round"/>
+  <path d="M62 68h74l-9 86a14 14 0 0 1-14 12H85a14 14 0 0 1-14-12z" fill="#c0795a"/>
+  <path d="M62 68h74l-3.4 34H65.4z" fill="#7c9a92"/>
+  <path d="M62 68c-10-4-16-10-18-18 10 2 20 6 28 10z" fill="#cf8a68"/>
+  <ellipse cx="99" cy="68" rx="37" ry="10" fill="#e4d8c9"/>
+  <ellipse cx="99" cy="68" rx="28" ry="6.5" fill="#a35f42"/>
+  <circle cx="88" cy="130" r="2.4" fill="#a35f42" opacity=".5"/>
+  <circle cx="112" cy="144" r="2" fill="#a35f42" opacity=".45"/>
+</svg>

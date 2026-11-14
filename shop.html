@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop — Sea Salt Clay</title>
+<meta name="description" content="Browse current studio inventory: handmade mugs, bowls, vases, plates and tableware. Every piece is one of a kind.">
+<link rel="icon" href="assets/img/mug.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#c0795a"/>
+        <path d="M1.8 24a19 19 0 0 0 36.4 0z" fill="#7c9a92"/>
+        <ellipse cx="20" cy="13" rx="11" ry="3.6" fill="#e4d8c9"/>
+      </svg>
+      Sea Salt Clay
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section wrap">
+    <div class="section-head">
+      <p class="eyebrow">The shop</p>
+      <h1>Every piece, one of a kind</h1>
+      <p>This is the current studio inventory. Each item is a single handmade piece — when it's sold, it's sold. Pick something and send a note; we'll sort out payment and shipping by email.</p>
+    </div>
+
+    <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+
+    <ul class="grid" id="shop-grid"></ul>
+
+    <div class="callout" style="margin-top:clamp(48px,7vw,80px)">
+      <h2>Looking for something specific?</h2>
+      <p>Custom orders open a few times a year — sets of dinnerware, wedding gifts, a replacement for a mug you dropped. Ask and we'll see what's possible.</p>
+      <a class="btn btn--primary" href="contact.html">Request a commission</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="19" fill="#c0795a"/>
+            <path d="M1.8 24a19 19 0 0 0 36.4 0z" fill="#7c9a92"/>
+            <ellipse cx="20" cy="13" rx="11" ry="3.6" fill="#e4d8c9"/>
+          </svg>
+          Sea Salt Clay
+        </a>
+        <p>Handmade stoneware for everyday use. Thrown, glazed and fired in a small coastal studio.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All pieces</a></li>
+          <li><a href="shop.html#grid">Mugs &amp; cups</a></li>
+          <li><a href="shop.html#grid">Bowls</a></li>
+          <li><a href="shop.html#grid">Vases</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#care">Care &amp; use</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#visit">Visit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <span>&copy; <span data-year>2026</span> Sea Salt Clay. All rights reserved.</span>
+      <span>Studio open by appointment · Coastal Lane, Seaside</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
