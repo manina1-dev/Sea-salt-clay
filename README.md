@@ -17,7 +17,7 @@ build step and no dependencies — plain HTML, one stylesheet and one script.
 ├── css/styles.css      All styles; design tokens live in :root
 ├── js/products.js      The pieces — edit this to change what is shown
 ├── js/main.js          Nav, grid rendering, filters, form handling
-└── assets/img/*.svg    Hand-drawn illustrations standing in for photos
+└── assets/img/        Photographs of the work, plus logo.svg
 ```
 
 ## Running it locally
@@ -39,14 +39,16 @@ entry carries both languages:
 
 ```js
 {
-  id: "harbour-mug",
-  name: "Harbour Mug",            // English
-  name_el: "Κούπα Λιμάνι",        // Greek
-  desc: "A chunky 350 ml mug…",
-  desc_el: "Χοντρή κούπα 350 ml…",
-  category: "mugs",               // must match an id in CATEGORIES
-  image: "assets/img/mug.svg",    // relative to the site root
-  featured: true                  // also shows on the home page
+  id: "daisy-mug",
+  name: "Daisy Mug",                 // English
+  name_el: "Κούπα Μαργαρίτα",        // Greek
+  desc: "Carved daisies around…",
+  desc_el: "Σκαλισμένες μαργαρίτες…",
+  category: "mugs",                  // must match an id in CATEGORIES
+  image: "assets/img/daisy-mug.webp", // relative to the site root
+  photo: true,                       // crop to fill the card
+  made: "2026-09",                   // when it was made, YYYY-MM
+  featured: true                     // also shows on the home page
 }
 ```
 
@@ -69,11 +71,28 @@ the header.
 
 Adding a page means adding it in both languages, or the switch will 404.
 
-## Swapping in real photos
+## Adding photographs
 
-The illustrations in `assets/img/` are placeholders. Drop real photos into that
-folder and point each product's `image` at them. Cards use a 4:3 frame with
-`object-fit: contain`, so square or 4:3 images need no cropping.
+Photographs live in `assets/img/` as WebP. Each piece needs a square version
+for the grid; the wide versions are for the hero and feature frames. The
+originals come off a phone as HEIC, which browsers cannot display, so they are
+converted:
+
+```python
+import pillow_heif
+from PIL import Image, ImageOps
+pillow_heif.register_heif_opener()
+
+im = ImageOps.exif_transpose(Image.open("IMG_1234.HEIC")).convert("RGB")
+side = min(im.size)
+w, h = im.size
+im.crop(((w-side)//2, (h-side)//2, (w+side)//2, (h+side)//2)) \
+  .resize((1200, 1200), Image.LANCZOS) \
+  .save("assets/img/name.webp", "WEBP", quality=82, method=6)
+```
+
+Then add an entry to `js/products.js` with `photo: true`, which makes the card
+crop the image to fill its square frame.
 
 ## Changing the look
 
