@@ -48,7 +48,7 @@
     var priceClass = sold ? "card__price card__price--sold" : "card__price";
 
     var action = sold
-      ? '<span class="card__link" aria-disabled="true">Out of stock</span>'
+      ? '<span class="card__link" aria-disabled="true">Gone</span>'
       : '<a class="card__link" href="contact.html?piece=' + encodeURIComponent(product.id) + '">Enquire &rarr;</a>';
 
     li.innerHTML =
@@ -72,7 +72,7 @@
     if (!products.length) {
       var empty = document.createElement("li");
       empty.className = "grid-empty";
-      empty.textContent = "Nothing in this category right now — check back after the next firing.";
+      empty.textContent = "Nothing in this category right now — the next firing will bring different pieces.";
       target.appendChild(empty);
       return;
     }
