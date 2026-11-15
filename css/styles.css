@@ -4,20 +4,25 @@
    ========================================================================== */
 
 :root {
-  /* Palette: warm clay + sea-salt sage */
-  --cream:      #faf6f1;
-  --sand:       #f1e9df;
-  --glaze:      #e4d8c9;
-  --clay:       #b56a4a;
-  --clay-dark:  #8f4e32;
-  --sea:        #7c9a92;
-  --sea-dark:   #5d7a72;
-  --ink:        #2d2521;
-  --muted:      #6f635a;
-  --line:       #ddcfbe;
+  /* Palette: salt light and sea blue.
+     The token names are unchanged from the earlier clay palette, so only
+     these values move; --clay is now the deep blue that carries white
+     text on buttons and links (4.8:1), while the pale blues stay for
+     backgrounds, borders and the mark. */
+  --cream:      #f4f9fc;
+  --sand:       #e9f2f8;
+  --glaze:      #dcedf8;
+  --clay:       #36749a;
+  --clay-dark:  #2a5c7c;
+  --sea:        #a9d2e8;
+  --sea-mid:    #8fc0de;
+  --sea-dark:   #6fa8cc;
+  --ink:        #22333d;
+  --muted:      #566c7d;
+  --line:       #d5e6f0;
 
   --bg:         var(--cream);
-  --surface:    #fffdfa;
+  --surface:    #ffffff;
   --text:       var(--ink);
   --text-muted: var(--muted);
   --accent:     var(--clay);
@@ -30,23 +35,23 @@
   --gutter: 20px;
   --radius: 14px;
   --radius-lg: 24px;
-  --shadow: 0 1px 2px rgba(45, 37, 33, .05), 0 8px 24px rgba(45, 37, 33, .06);
-  --shadow-lift: 0 2px 4px rgba(45, 37, 33, .06), 0 18px 40px rgba(45, 37, 33, .12);
+  --shadow: 0 1px 2px rgba(34, 51, 61, .05), 0 8px 24px rgba(34, 51, 61, .07);
+  --shadow-lift: 0 2px 4px rgba(34, 51, 61, .06), 0 18px 40px rgba(34, 51, 61, .13);
   --transition: 180ms cubic-bezier(.4, 0, .2, 1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg:         #1b1715;
-    --surface:    #241f1c;
-    --sand:       #2b2522;
-    --glaze:      #332b26;
-    --line:       #3d342e;
-    --text:       #f2eae2;
-    --text-muted: #b3a498;
-    --accent:     #d08a68;
-    --accent-ink: #1b1715;
-    --sea:        #8faea6;
+    --bg:         #141c22;
+    --surface:    #1b262e;
+    --sand:       #1b262e;
+    --glaze:      #223039;
+    --line:       #2c3d47;
+    --text:       #e8f1f6;
+    --text-muted: #9bb0be;
+    --accent:     #8cc0e2;
+    --accent-ink: #11191f;
+    --sea:        #8fc0de;
   }
 }
 
@@ -132,7 +137,7 @@ img, svg { max-width: 100%; display: block; }
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--sea-dark);
+  color: var(--clay);
   margin: 0 0 .75rem;
 }
 @media (prefers-color-scheme: dark) {
