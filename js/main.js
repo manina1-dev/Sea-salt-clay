@@ -1,11 +1,16 @@
 /* ---------------------------------------------------------------------------
    Sea Salt Clay — site behaviour
    Mobile nav, product grid rendering, shop filters, footer year.
+   Bilingual: each page sets window.SITE = { root, lang } before this loads.
    No dependencies, no build step.
    --------------------------------------------------------------------------- */
 
 (function () {
   "use strict";
+
+  var SITE = window.SITE || { root: "", lang: "en" };
+  var T = (window.STRINGS || {})[SITE.lang] || (window.STRINGS || {}).en || {};
+  var EL = SITE.lang === "el";
 
   /* ---------------------------------------------------------- mobile nav */
 
@@ -25,43 +30,26 @@
   var yearEl = document.querySelector("[data-year]");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  /* ------------------------------------------------------- price helpers */
+  /* ------------------------------------------------- per-language fields */
 
-  var money = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 0
-  });
+  function nameOf(p) { return EL && p.name_el ? p.name_el : p.name; }
+  function descOf(p) { return EL && p.desc_el ? p.desc_el : p.desc; }
+  function labelOf(c) { return EL && c.label_el ? c.label_el : c.label; }
 
   /* ---------------------------------------------------------- card markup */
 
   function cardFor(product) {
-    var sold = product.status === "sold";
     var li = document.createElement("li");
     li.className = "card";
     li.setAttribute("data-category", product.category);
 
-    var tag = sold
-      ? '<span class="card__tag card__tag--sold">Sold</span>'
-      : '';
-
-    var priceClass = sold ? "card__price card__price--sold" : "card__price";
-
-    var action = sold
-      ? '<span class="card__link" aria-disabled="true">Gone</span>'
-      : '<a class="card__link" href="contact.html?piece=' + encodeURIComponent(product.id) + '">Enquire &rarr;</a>';
-
     li.innerHTML =
-      '<div class="card__media">' + tag +
-        '<img src="' + product.image + '" alt="' + product.name + '" loading="lazy">' +
+      '<div class="card__media">' +
+        '<img src="' + SITE.root + product.image + '" alt="' + nameOf(product) + '" loading="lazy">' +
       '</div>' +
       '<div class="card__body">' +
-        '<h3 class="card__name">' + product.name + '</h3>' +
-        '<p class="card__desc">' + product.desc + '</p>' +
-        '<div class="card__foot">' +
-          '<span class="' + priceClass + '">' + money.format(product.price) + '</span>' +
-          action +
-        '</div>' +
+        '<h3 class="card__name">' + nameOf(product) + '</h3>' +
+        '<p class="card__desc">' + descOf(product) + '</p>' +
       '</div>';
 
     return li;
@@ -72,7 +60,7 @@
     if (!products.length) {
       var empty = document.createElement("li");
       empty.className = "grid-empty";
-      empty.textContent = "Nothing in this category right now — the next firing will bring different pieces.";
+      empty.textContent = T.empty;
       target.appendChild(empty);
       return;
     }
@@ -90,7 +78,7 @@
 
   /* ----------------------------------------------------- shop grid + tabs */
 
-  var shop = document.getElementById("shop-grid");
+  var shop = document.getElementById("work-grid");
   var filterBar = document.getElementById("filters");
 
   if (shop) {
@@ -119,7 +107,7 @@
         btn.type = "button";
         btn.className = "filter";
         btn.dataset.filter = cat.id;
-        btn.textContent = cat.label + " (" + count + ")";
+        btn.textContent = labelOf(cat) + " (" + count + ")";
         btn.setAttribute("aria-pressed", String(cat.id === active));
         btn.addEventListener("click", function () {
           active = cat.id;
@@ -139,11 +127,9 @@
     var id = new URLSearchParams(window.location.search).get("piece");
     var match = all.filter(function (p) { return p.id === id; })[0];
     if (match) {
-      pieceField.value = match.name;
+      pieceField.value = nameOf(match);
       var message = document.getElementById("message");
-      if (message && !message.value) {
-        message.value = "Hi! I'd like to ask about the " + match.name + ".";
-      }
+      if (message && !message.value) message.value = T.prefill(nameOf(match));
     }
   }
 
@@ -155,8 +141,7 @@
       event.preventDefault();
       var status = document.getElementById("form-status");
       if (status) {
-        status.textContent =
-          "This demo form isn't connected to anything yet — see the README for how to hook it up.";
+        status.textContent = T.demo;
         status.hidden = false;
       }
     });

@@ -3,13 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shop — Sea Salt Clay</title>
-<meta name="description" content="Browse current studio inventory: handmade mugs, bowls, vases, plates and tableware. Every piece is one of a kind.">
+<title>Work — Sea Salt Clay</title>
+<meta name="description" content="Handmade mugs, bowls, vases, plates and tableware. Every piece is one of a kind.">
 <link rel="icon" href="assets/img/mug.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="alternate" hreflang="en" href="work.html">
+<link rel="alternate" hreflang="el" href="el/work.html">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -29,9 +31,10 @@
     </button>
     <nav class="nav" id="nav">
       <a href="index.html">Home</a>
-      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="work.html" aria-current="page">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a class="nav__lang" href="el/work.html" hreflang="el" lang="el">ΕΛ</a>
     </nav>
   </div>
 </header>
@@ -39,19 +42,19 @@
 <main id="main">
   <section class="section wrap">
     <div class="section-head">
-      <p class="eyebrow">The shop</p>
+      <p class="eyebrow">The work</p>
       <h1>Every piece, one of a kind</h1>
-      <p>Everything here is a single piece — not one of a batch, not something that can be reordered. The glaze on each one belongs to one firing only. When a piece finds a home it disappears from this page and does not come back.</p>
+      <p>Everything here is a single piece — not one of a batch, not something that can be repeated. The glaze on each one belongs to one firing only. This is a record of what has come out of the kiln, not a catalogue.</p>
     </div>
 
     <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
 
-    <ul class="grid" id="shop-grid"></ul>
+    <ul class="grid" id="work-grid"></ul>
 
     <div class="callout" style="margin-top:clamp(48px,7vw,80px)">
-      <h2>Your logo, your words, on clay</h2>
-      <p>I also take custom work. A logo for a café or a shop, a name, a date, a few words of someone's own — fired onto a piece so it stays there for good. Tell me what you have in mind and I'll tell you honestly whether I can make it.</p>
-      <a class="btn btn--primary" href="contact.html">Ask about custom work</a>
+      <h2>Lettering and logos</h2>
+      <p>Some of what I make carries words: a logo, a name, a date, a line of someone's own, fired onto the clay so it stays there for good. If that's something you'd like to talk about, the door is open.</p>
+      <a class="btn btn--ghost" href="contact.html">Get in touch</a>
     </div>
   </section>
 </main>
@@ -71,12 +74,12 @@
         <p>Handmade stoneware for everyday use. Thrown, glazed and fired by one pair of hands — no two pieces alike.</p>
       </div>
       <div>
-        <h4>Shop</h4>
+        <h4>Work</h4>
         <ul>
-          <li><a href="shop.html">All pieces</a></li>
-          <li><a href="shop.html#grid">Mugs &amp; cups</a></li>
-          <li><a href="shop.html#grid">Bowls</a></li>
-          <li><a href="shop.html#grid">Vases</a></li>
+          <li><a href="work.html">All pieces</a></li>
+          <li><a href="work.html#grid">Mugs &amp; cups</a></li>
+          <li><a href="work.html#grid">Bowls</a></li>
+          <li><a href="work.html#grid">Vases</a></li>
         </ul>
       </div>
       <div>
@@ -96,6 +99,7 @@
   </div>
 </footer>
 
+<script>window.SITE = { root: "", lang: "en" };</script>
 <script src="js/products.js"></script>
 <script src="js/main.js"></script>
 </body>

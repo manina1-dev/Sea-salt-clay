@@ -10,6 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="el" href="el/index.html">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -29,9 +31,10 @@
     </button>
     <nav class="nav" id="nav">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="shop.html">Shop</a>
+      <a href="work.html">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a class="nav__lang" href="el/index.html" hreflang="el" lang="el">ΕΛ</a>
     </nav>
   </div>
 </header>
@@ -45,12 +48,12 @@
         <h1>Each piece exists only once.</h1>
         <p class="hero__lede">A very small studio. Everything is thrown, glazed and fired by hand, and the glazes never fall the same way twice — so no piece can be made again. What you see is the only one there is.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="shop.html">Browse the shop</a>
+          <a class="btn btn--primary" href="work.html">See the work</a>
           <a class="btn btn--ghost" href="about.html">How it's made</a>
         </div>
         <div class="hero__meta">
           <span>Food &amp; dishwasher safe</span>
-          <span>Fired at 2200&deg;F</span>
+          <span>Fired at 1200&deg;C</span>
           <span>Never made twice</span>
         </div>
       </div>
@@ -65,10 +68,10 @@
       <div class="section-head">
         <p class="eyebrow">Fresh out of the kiln</p>
         <h2>The latest firing</h2>
-        <p>These are single pieces, not a line. Each one came out of the kiln the way it did and will not come out that way again — when it goes, it goes for good.</p>
+        <p>These are single pieces, not a line. Each one came out of the kiln the way it did and will not come out that way again.</p>
       </div>
       <ul class="grid" id="featured-grid"></ul>
-      <p style="margin-top:2rem"><a class="btn btn--ghost" href="shop.html">See all pieces</a></p>
+      <p style="margin-top:2rem"><a class="btn btn--ghost" href="work.html">See everything</a></p>
     </div>
   </section>
 
@@ -108,7 +111,7 @@
         </li>
         <li>
           <h3>Glaze &amp; fire</h3>
-          <p>Glazes are mixed in-studio, dipped by hand, and fired to 2200&deg;F until they go glassy.</p>
+          <p>Glazes are mixed in-studio, dipped by hand, and fired to 1200&deg;C until they go glassy.</p>
         </li>
       </ol>
     </div>
@@ -117,8 +120,8 @@
   <section class="section wrap">
     <div class="callout">
       <p class="eyebrow">Stay in the loop</p>
-      <h2>Kiln openings are announced first on Instagram</h2>
-      <p>New batches sell out quickly. Follow along and you'll see what's coming out of the kiln before it goes up in the shop.</p>
+      <h2>New work goes up on Instagram first</h2>
+      <p>Follow along and you'll see what comes out of the kiln, usually before it appears here.</p>
       <a class="btn btn--primary" href="https://instagram.com/seasaltclay" rel="me noopener" target="_blank">Follow @seasaltclay</a>
     </div>
   </section>
@@ -140,12 +143,12 @@
         <p>Handmade stoneware for everyday use. Thrown, glazed and fired by one pair of hands — no two pieces alike.</p>
       </div>
       <div>
-        <h4>Shop</h4>
+        <h4>Work</h4>
         <ul>
-          <li><a href="shop.html">All pieces</a></li>
-          <li><a href="shop.html#grid">Mugs &amp; cups</a></li>
-          <li><a href="shop.html#grid">Bowls</a></li>
-          <li><a href="shop.html#grid">Vases</a></li>
+          <li><a href="work.html">All pieces</a></li>
+          <li><a href="work.html#grid">Mugs &amp; cups</a></li>
+          <li><a href="work.html#grid">Bowls</a></li>
+          <li><a href="work.html#grid">Vases</a></li>
         </ul>
       </div>
       <div>
@@ -165,6 +168,7 @@
   </div>
 </footer>
 
+<script>window.SITE = { root: "", lang: "en" };</script>
 <script src="js/products.js"></script>
 <script src="js/main.js"></script>
 </body>

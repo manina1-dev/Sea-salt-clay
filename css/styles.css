@@ -547,3 +547,26 @@ details.faq p { color: var(--text-muted); margin: 0 0 14px; max-width: 62ch; }
   .site-footer__grid { grid-template-columns: 1fr 1fr; }
   .site-footer__grid > :first-child { grid-column: 1 / -1; }
 }
+
+/* --------------------------------------------------------- language switch */
+
+.nav__lang {
+  margin-left: 6px;
+  padding: 6px 12px !important;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: .78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: .06em;
+  color: var(--text-muted) !important;
+}
+.nav__lang:hover { background: var(--glaze); color: var(--text) !important; }
+
+@media (max-width: 720px) {
+  .nav__lang {
+    margin-left: 0;
+    margin-top: 8px;
+    text-align: center;
+    border-radius: 10px !important;
+  }
+}

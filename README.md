@@ -1,18 +1,23 @@
 # Sea Salt Clay
 
-A small static website for a handmade pottery studio. Four pages, no build step,
-no dependencies — plain HTML, one stylesheet and one script.
+A portfolio site for a handmade pottery studio in Attica, Greece. Not a shop:
+there are no prices, no stock and nothing for sale — it exists to show the work
+and how it is made.
+
+Bilingual (English at the root, Greek under `el/`), four pages per language, no
+build step and no dependencies — plain HTML, one stylesheet and one script.
 
 ```
 .
-├── index.html          Home: hero, featured pieces, studio intro, process
-├── shop.html           Catalogue with category filters
+├── index.html          Home (English)
+├── work.html           The work, with category filters
 ├── about.html          Studio story, process, care instructions, FAQ
-├── contact.html        Contact form + studio details
+├── contact.html        Contact form + Instagram
+├── el/                 The same four pages in Greek
 ├── css/styles.css      All styles; design tokens live in :root
-├── js/products.js      The catalogue — edit this to change the shop
+├── js/products.js      The pieces — edit this to change what is shown
 ├── js/main.js          Nav, grid rendering, filters, form handling
-└── assets/img/*.svg    Hand-drawn product illustrations
+└── assets/img/*.svg    Hand-drawn illustrations standing in for photos
 ```
 
 ## Running it locally
@@ -26,27 +31,43 @@ python3 -m http.server 8000
 
 Then visit <http://localhost:8000>.
 
-## Editing the shop
+## Editing the pieces
 
-Everything in the shop comes from the `window.PRODUCTS` array in
-`js/products.js`. Add, remove or reorder entries there — no other file needs to
-change.
+Everything shown comes from the `window.PRODUCTS` array in `js/products.js`.
+Add, remove or reorder entries there — no other file needs to change. Each
+entry carries both languages:
 
 ```js
 {
-  id: "harbour-mug",                 // used in the enquiry link
-  name: "Harbour Mug",
-  desc: "A chunky 12 oz mug…",
-  price: 38,                         // plain number, rendered as USD
-  category: "mugs",                  // must match an id in CATEGORIES
-  image: "assets/img/mug.svg",
-  status: "available",               // or "sold"
-  featured: true                     // shows on the home page too
+  id: "harbour-mug",
+  name: "Harbour Mug",            // English
+  name_el: "Κούπα Λιμάνι",        // Greek
+  desc: "A chunky 350 ml mug…",
+  desc_el: "Χοντρή κούπα 350 ml…",
+  category: "mugs",               // must match an id in CATEGORIES
+  image: "assets/img/mug.svg",    // relative to the site root
+  featured: true                  // also shows on the home page
 }
 ```
 
-Filter buttons are generated from `window.CATEGORIES` in the same file, and a
-category with no products in it is skipped automatically.
+There are deliberately no price or stock fields. Filter buttons are generated
+from `window.CATEGORIES`, and a category with nothing in it is skipped.
+
+## Languages
+
+English lives at the root, Greek under `el/`. Each page declares which it is
+just before the scripts:
+
+```html
+<script>window.SITE = { root: "../", lang: "el" };</script>
+```
+
+`root` is how the page reaches `assets/` and `js/`; `lang` picks the Greek or
+English fields from `products.js` and the interface strings in
+`window.STRINGS`. Pages are paired with `hreflang` tags and the EN/ΕΛ switch in
+the header.
+
+Adding a page means adding it in both languages, or the switch will 404.
 
 ## Swapping in real photos
 
@@ -71,7 +92,7 @@ Before this goes anywhere public, swap out:
 
 - the studio address and market details in `contact.html` and the footer of each page
 - `hello@seasaltclay.example` — not a real address
-- product names, descriptions and prices in `js/products.js`
+- the piece names and descriptions in `js/products.js`, in both languages
 - the copy on `about.html`, which is written to be plausible, not true
 
 ## Wiring up the contact form
@@ -91,14 +112,6 @@ submit handler at the bottom of `js/main.js`:
 ```html
 <form class="form" id="contact-form" action="mailto:you@example.com" method="POST" enctype="text/plain">
 ```
-
-## Taking payment
-
-There's no checkout here — the shop links each piece to the contact form, which
-suits one-of-a-kind work where stock is a single item. If you want real
-checkout, the usual options are embedded buy-buttons from a payment provider
-(drop-in, keeps this site static) or moving the catalogue onto a hosted store
-platform.
 
 ## Deploying
 
