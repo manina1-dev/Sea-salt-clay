@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Sea Salt Clay">
+  <path d="M6 7.5c3.2-2.2 5.4 1.4 8.4.2S19.8 4.6 23 6s5.4 2 8.6.4" fill="none" stroke="#A9D2E8" stroke-width="1.7" stroke-linecap="round"/>
+  <path d="M5 16.5h30c0 8.3-6.7 15-15 15s-15-6.7-15-15z" fill="#8FC0DE"/>
+  <ellipse cx="20" cy="16.5" rx="15" ry="3.6" fill="#DCEDF8"/>
+</svg>
