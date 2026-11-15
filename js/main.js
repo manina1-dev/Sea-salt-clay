@@ -44,7 +44,7 @@
     li.setAttribute("data-category", product.category);
 
     li.innerHTML =
-      '<div class="card__media">' +
+      '<div class="card__media' + (product.photo ? ' card__media--photo' : '') + '">' +
         '<img src="' + SITE.root + product.image + '" alt="' + nameOf(product) + '" loading="lazy">' +
       '</div>' +
       '<div class="card__body">' +

@@ -10,89 +10,40 @@
 
 window.PRODUCTS = [
   {
-    id: "harbour-mug",
-    name: "Harbour Mug",
-    name_el: "Κούπα Λιμάνι",
-    desc: "A chunky 350 ml mug with a pulled handle and a sage glaze dip.",
-    desc_el: "Χοντρή κούπα 350 ml με χειροποίητο χερούλι, βουτηγμένη σε φασκόμηλο γλάσο.",
-    category: "mugs",
-    image: "assets/img/mug.svg",
-    featured: true
-  },
-  {
-    id: "tide-bowl",
-    name: "Tide Serving Bowl",
-    name_el: "Μπολ Σερβιρίσματος Παλίρροια",
-    desc: "Wide and shallow — made for salads, pasta and too many clementines.",
-    desc_el: "Φαρδύ και ρηχό — για σαλάτες, ζυμαρικά και υπερβολικά πολλά μανταρίνια.",
+    id: "crackle-bowl",
+    name: "Crackle Bowl",
+    name_el: "Μπολ Κρακελέ",
+    desc: "A bowl with a free, uneven rim. The inside is a crackle glaze over brown — white lines breaking across the surface, different in every firing.",
+    desc_el: "Μπολ με ελεύθερο, ανομοιόμορφο χείλος. Στο εσωτερικό, κρακελέ γλάσο πάνω σε καφέ — λευκές γραμμές που σπάνε στην επιφάνεια, διαφορετικές σε κάθε ψήσιμο.",
     category: "bowls",
-    image: "assets/img/bowl.svg",
+    image: "assets/img/crackle-bowl.webp",
+    photo: true,
+    made: "2026-10",
     featured: true
   },
   {
-    id: "dune-vase",
-    name: "Dune Bud Vase",
-    name_el: "Βάζο Αμμόλοφος",
-    desc: "A narrow neck for a single stem, with a speckled unglazed foot.",
-    desc_el: "Στενός λαιμός για ένα μόνο κλαδί, με άβαφη βάση γεμάτη στίγματα.",
-    category: "vases",
-    image: "assets/img/vase.svg",
+    id: "daisy-mug",
+    name: "Daisy Mug",
+    name_el: "Κούπα Μαργαρίτα",
+    desc: "Carved daisies around a deep blue-grey glaze, with a small pulled handle. The glaze pools darker where the carving cuts into the clay.",
+    desc_el: "Σκαλισμένες μαργαρίτες σε βαθύ γκριζογάλανο γλάσο, με μικρό τραβηγμένο χερούλι. Το γλάσο μαζεύει πιο σκούρο εκεί που το σκάλισμα μπαίνει στον πηλό.",
+    category: "mugs",
+    image: "assets/img/daisy-mug.webp",
+    photo: true,
+    made: "2026-09",
     featured: true
   },
   {
-    id: "salt-plate",
-    name: "Salt Dinner Plate",
-    name_el: "Πιάτο Αλάτι",
-    desc: "A 25 cm everyday plate. Stacks well, survives the dishwasher.",
-    desc_el: "Καθημερινό πιάτο 25 εκ. Στοιβάζεται καλά, αντέχει στο πλυντήριο.",
-    category: "tableware",
-    image: "assets/img/plate.svg",
-    featured: true
-  },
-  {
-    id: "cove-planter",
-    name: "Cove Planter",
-    name_el: "Γλάστρα Όρμος",
-    desc: "Drainage hole and matching saucer. Fits a 10 cm nursery pot.",
-    desc_el: "Με οπή αποστράγγισης και πιατάκι στο ίδιο γλάσο. Χωράει γλαστράκι 10 εκ.",
+    id: "little-houses",
+    name: "Little Houses",
+    name_el: "Σπιτάκια",
+    desc: "A small family of figures, white with pale blue stripes and a heart on each one. Hand-painted, no two the same height.",
+    desc_el: "Μια μικρή οικογένεια από φιγούρες, λευκές με γαλάζιες ρίγες και μια καρδιά στην καθεμιά. Ζωγραφισμένες στο χέρι, καμία στο ίδιο ύψος.",
     category: "home",
-    image: "assets/img/planter.svg"
-  },
-  {
-    id: "morning-teapot",
-    name: "Morning Teapot",
-    name_el: "Τσαγιέρα Πρωινό",
-    desc: "Holds four cups. Built-in strainer, lid that stays put when you pour.",
-    desc_el: "Χωράει τέσσερα φλιτζάνια. Ενσωματωμένο φίλτρο, καπάκι που δεν πέφτει όταν σερβίρεις.",
-    category: "tableware",
-    image: "assets/img/teapot.svg"
-  },
-  {
-    id: "drift-tumblers",
-    name: "Drift Tumblers, Pair",
-    name_el: "Ποτήρια Ρεύμα, Ζευγάρι",
-    desc: "Two 240 ml tumblers, no handles. Good for wine, water or whisky.",
-    desc_el: "Δύο ποτήρια 240 ml, χωρίς χερούλι. Για κρασί, νερό ή ουίσκι.",
-    category: "mugs",
-    image: "assets/img/tumbler.svg"
-  },
-  {
-    id: "estuary-pitcher",
-    name: "Estuary Pitcher",
-    name_el: "Κανάτα Εκβολή",
-    desc: "A one-litre pitcher with a proper drip-free lip.",
-    desc_el: "Κανάτα ενός λίτρου με στόμιο που πραγματικά δεν στάζει.",
-    category: "tableware",
-    image: "assets/img/pitcher.svg"
-  },
-  {
-    id: "shallow-bowl-set",
-    name: "Breakfast Bowls, Set of Two",
-    name_el: "Μπολ Πρωινού, Σετ των Δύο",
-    desc: "Deep enough for soup, shallow enough for cereal and a spoon.",
-    desc_el: "Αρκετά βαθιά για σούπα, αρκετά ρηχά για δημητριακά και κουτάλι.",
-    category: "bowls",
-    image: "assets/img/bowl.svg"
+    image: "assets/img/little-houses.webp",
+    photo: true,
+    made: "2025-01",
+    featured: true
   }
 ];
 
