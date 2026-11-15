@@ -91,7 +91,6 @@ rather not call out to Google.
 Before this goes anywhere public, swap out:
 
 - the studio address and market details in `contact.html` and the footer of each page
-- `hello@seasaltclay.example` — not a real address
 - the piece names and descriptions in `js/products.js`, in both languages
 - the copy on `about.html`, which is written to be plausible, not true
 
