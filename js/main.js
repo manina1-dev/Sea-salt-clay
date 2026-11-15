@@ -133,15 +133,55 @@
     }
   }
 
-  /* ------------------------------------------------- contact form (demo) */
+  /* -------------------------------------------------------- contact form
+
+     No backend and no third-party form service: the form assembles the
+     message and hands it to the visitor's own mail program, already
+     addressed and filled in. The address is read from the mailto link on
+     the page, so it lives in one place only.                           */
 
   var form = document.getElementById("contact-form");
   if (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+
+      var link = document.querySelector('a[href^="mailto:"]');
+      var addr = link ? link.getAttribute("href").replace("mailto:", "").split("?")[0] : "";
+      if (!addr) return;
+
+      function val(id) {
+        var el = document.getElementById(id);
+        return el && el.value ? String(el.value).trim() : "";
+      }
+
+      var piece = val("piece");
+      var subject = T.subject + (piece ? " — " + piece : "");
+
+      var body = [
+        T.fName + ": " + val("name"),
+        T.fEmail + ": " + val("email"),
+        piece ? T.fPiece + ": " + piece : null,
+        T.fReason + ": " + val("reason"),
+        "",
+        val("message")
+      ].filter(function (l) { return l !== null; }).join("\n");
+
+      var href = "mailto:" + addr +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      // An anchor click is handled more reliably than assigning to
+      // location.href, which some browsers ignore for mailto:.
+      var a = document.createElement("a");
+      a.href = href;
+      a.style.display = "none";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
       var status = document.getElementById("form-status");
       if (status) {
-        status.textContent = T.demo;
+        status.textContent = T.sent(addr);
         status.hidden = false;
       }
     });

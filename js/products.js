@@ -61,11 +61,29 @@ window.STRINGS = {
   en: {
     empty:    "Nothing in this category right now — the next firing will bring different pieces.",
     prefill:  function (n) { return "Hi! I'd like to ask about the " + n + "."; },
-    demo:     "This demo form isn't connected to anything yet — see the README for how to hook it up."
+    subject:  "Message from the website",
+    fName:    "Name",
+    fEmail:   "Email",
+    fPiece:   "Piece",
+    fReason:  "About",
+    fMessage: "Message",
+    sent:     function (addr) {
+      return "Your email program should now be open with the message ready — press send and it reaches the studio. " +
+             "If nothing opened, write directly to " + addr + ".";
+    }
   },
   el: {
     empty:    "Δεν υπάρχει τίποτα σε αυτή την κατηγορία αυτή τη στιγμή — το επόμενο ψήσιμο θα φέρει άλλα κομμάτια.",
     prefill:  function (n) { return "Γεια σας! Θα ήθελα να ρωτήσω για το κομμάτι «" + n + "»."; },
-    demo:     "Η φόρμα δεν είναι ακόμα συνδεδεμένη — δείτε το README για το πώς συνδέεται."
+    subject:  "Μήνυμα από το site",
+    fName:    "Όνομα",
+    fEmail:   "Email",
+    fPiece:   "Κομμάτι",
+    fReason:  "Σχετικά με",
+    fMessage: "Μήνυμα",
+    sent:     function (addr) {
+      return "Το πρόγραμμα email σας θα πρέπει να άνοιξε με το μήνυμα έτοιμο — πατήστε αποστολή και φτάνει στο εργαστήριο. " +
+             "Αν δεν άνοιξε τίποτα, γράψτε απευθείας στο " + addr + ".";
+    }
   }
 };

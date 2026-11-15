@@ -94,22 +94,26 @@ Before this goes anywhere public, swap out:
 - the piece names and descriptions in `js/products.js`, in both languages
 - the copy on `about.html`, which is written to be plausible, not true
 
-## Wiring up the contact form
+## The contact form
 
-The form currently intercepts its own submit and shows a note; it sends
-nothing. Two easy ways to make it real:
+The form has no backend and uses no third-party service. On submit it
+assembles the message and hands it to the visitor's own mail program,
+already addressed and filled in, via a `mailto:` link.
 
-**A hosted form service** — point the form at the endpoint and delete the
-submit handler at the bottom of `js/main.js`:
+The address is read from the first `mailto:` link on the page, so it is
+written in exactly one place — change it in `contact.html` and
+`el/contact.html` and the form follows.
+
+The trade-off: a visitor with no mail program configured sees nothing
+happen, which is why the status line also prints the address and the
+note below the form points at Instagram.
+
+If you later want messages delivered without involving the visitor's mail
+client, sign up with a hosted form service, point the form at the endpoint
+and delete the submit handler at the bottom of `js/main.js`:
 
 ```html
 <form class="form" id="contact-form" action="https://your-form-endpoint" method="POST">
-```
-
-**Plain mailto** — no backend, opens the visitor's mail client:
-
-```html
-<form class="form" id="contact-form" action="mailto:you@example.com" method="POST" enctype="text/plain">
 ```
 
 ## Deploying
