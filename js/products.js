@@ -10,6 +10,18 @@
 
 window.PRODUCTS = [
   {
+    id: "soy-candles",
+    name: "Soy Candles in Stoneware",
+    name_el: "Κεριά Σόγιας σε Κεραμικό",
+    desc: "Hand-thrown vessels poured with soy wax and a Christmas scent. When the candle has burned down, wash the vessel out and it becomes a bowl like any other — dishwasher included. The candle is temporary; the pot is not.",
+    desc_el: "Σκεύη πλασμένα στον τροχό, γεμισμένα με κερί σόγιας και χριστουγεννιάτικο άρωμα. Όταν τελειώσει το κερί, πλένετε το σκεύος και γίνεται ένα κανονικό μπολ — μπαίνει και στο πλυντήριο. Το κερί είναι προσωρινό, το κεραμικό όχι.",
+    category: "candles",
+    image: "assets/img/candles.webp",
+    photo: true,
+    made: "2026-11",
+    featured: true
+  },
+  {
     id: "crackle-bowl",
     name: "Crackle Bowl",
     name_el: "Μπολ Κρακελέ",
@@ -53,6 +65,7 @@ window.CATEGORIES = [
   { id: "bowls",     label: "Bowls",        label_el: "Μπολ" },
   { id: "tableware", label: "Tableware",    label_el: "Σκεύη τραπεζιού" },
   { id: "vases",     label: "Vases",        label_el: "Βάζα" },
+  { id: "candles",   label: "Candles",      label_el: "Κεριά" },
   { id: "home",      label: "Home",         label_el: "Σπίτι" }
 ];
 
