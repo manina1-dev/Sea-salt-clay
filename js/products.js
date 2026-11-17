@@ -22,6 +22,52 @@ window.PRODUCTS = [
     featured: true
   },
   {
+    id: "blue-candle",
+    name: "Blue-Rimmed Candle",
+    name_el: "Κερί με Μπλε Χείλος",
+    desc: "Cobalt poured over the rim and left to run down the white, stopping where it wanted to. Filled with soy wax; wash it out when the candle is done and keep the bowl.",
+    desc_el: "Κοβάλτιο χυμένο από το χείλος, αφημένο να τρέξει πάνω στο λευκό και να σταματήσει όπου θέλησε. Γεμισμένο με κερί σόγιας· όταν τελειώσει, το πλένετε και κρατάτε το μπολ.",
+    category: "candles",
+    image: "assets/img/blue-candle.webp",
+    photo: true,
+    made: "2026-11",
+    featured: true
+  },
+  {
+    id: "galaxy-bowl",
+    name: "Galaxy Bowl",
+    name_el: "Μπολ Γαλαξίας",
+    desc: "A glaze that breaks into clouds and drifts inside the bowl — blues and greens settling where the fire took them. Plain white outside, so the inside does all the talking.",
+    desc_el: "Ένα γυάλωμα που σπάει σε σύννεφα μέσα στο μπολ — μπλε και πράσινα που κάθισαν όπου τα πήγε η φωτιά. Απ' έξω σκέτο λευκό, ώστε να μιλάει μόνο το μέσα.",
+    category: "bowls",
+    image: "assets/img/galaxy-bowl.webp",
+    photo: true,
+    made: "2026-11",
+    featured: true
+  },
+  {
+    id: "pinched-bowl",
+    name: "Pinched Bowl",
+    name_el: "Τσιμπητό Μπολ",
+    desc: "Built by pinching the clay between finger and thumb instead of throwing it, so the wall keeps every mark of being made. The rim rises and falls where the hand left it.",
+    desc_el: "Φτιαγμένο με τσίμπημα του πηλού ανάμεσα σε δάχτυλα, όχι στον τροχό, οπότε το τοίχωμα κρατάει κάθε σημάδι του φτιαξίματος. Το χείλος ανεβοκατεβαίνει εκεί που το άφησε το χέρι.",
+    category: "bowls",
+    image: "assets/img/pinched-bowl.webp",
+    photo: true,
+    made: "2026-11"
+  },
+  {
+    id: "white-bowl",
+    name: "White Bowl",
+    name_el: "Λευκό Μπολ",
+    desc: "A plain white glaze over speckled clay, and nothing else. The dark flecks come up through it in the firing — the only decoration is the clay itself.",
+    desc_el: "Σκέτο λευκό γυάλωμα πάνω σε πηλό με στίγματα, και τίποτα άλλο. Τα σκούρα στίγματα ανεβαίνουν μέσα από αυτό στο ψήσιμο — το μόνο στολίδι είναι ο ίδιος ο πηλός.",
+    category: "bowls",
+    image: "assets/img/white-bowl.webp",
+    photo: true,
+    made: "2026-11"
+  },
+  {
     id: "crackle-bowl",
     name: "Crackle Bowl",
     name_el: "Μπολ Κρακελέ",
