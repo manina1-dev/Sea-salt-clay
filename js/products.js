@@ -22,6 +22,18 @@ window.PRODUCTS = [
     featured: true
   },
   {
+    id: "heart-candle",
+    name: "Heart Candle",
+    name_el: "Κερί με Καρδιά",
+    desc: "The same soy candle in the same hand-thrown bowl, with a small wax heart set on the surface. It melts into the candle as it burns. The speckled rim is bare clay under a white glaze.",
+    desc_el: "Το ίδιο κερί σόγιας στο ίδιο πλασμένο μπολ, με μια μικρή κέρινη καρδιά πάνω στην επιφάνεια. Λιώνει μέσα στο κερί καθώς καίει. Το στιγματισμένο χείλος είναι γυμνός πηλός κάτω από λευκό γυάλωμα.",
+    category: "candles",
+    image: "assets/img/heart-candle.webp",
+    photo: true,
+    made: "2026-11",
+    featured: true
+  },
+  {
     id: "blue-candle",
     name: "Blue-Rimmed Candle",
     name_el: "Κερί με Μπλε Χείλος",
